@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
+
+two:
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
+
+apple:
+  title: Apple
+  description: yummy fruit
+  image_url: apple.jpg
+  price: 0.99
+
+clock:
+  title: clock
+  description: a great piece of technology for keeping time
+  image_url: clock.gif
+  price: 40
