@@ -23,3 +23,9 @@ clock:
   description: a great piece of technology for keeping time
   image_url: clock.gif
   price: 40
+
+ruby:
+  title: Programming Ruby 2.1
+  description: stuff
+  image_url: hi.jpg
+  price: 10
