@@ -29,3 +29,9 @@ ruby:
   description: stuff
   image_url: hi.jpg
   price: 10
+
+bus:
+  title: Bus
+  description: my favorite mode of transport
+  image_url: bus.jpg
+  price: 100_000

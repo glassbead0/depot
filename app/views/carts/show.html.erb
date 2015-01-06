@@ -5,7 +5,8 @@
     <tr>
       <td><%= item.quantity %> &times;&nbsp</td>
       <td><%= item.product.title %></td>
-      <td class="item_price"><%= number_to_currency(item.total_price) %></td>
+      <td class="item_price"><%= number_to_currency(item.line_item_price) %></td>
+      <td class="delete_button"><%= button_to 'Remove', item, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 
@@ -15,4 +16,6 @@
   </tr>
 </table>
 
-<%= button_to 'Empty Cart', @cart, class: 'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Keep Shopping', store_path, class: 'btn btn-success' %>
+<br/><br/>
+<%= button_to 'Empty Cart', @cart, class: 'btn btn-warning btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %>
