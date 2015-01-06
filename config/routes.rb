@@ -1,8 +1,11 @@
-Rails.application.routes.draw do
-  root 'store#index', as: 'store'
+Depot::Application.routes.draw do
   get 'store/index'
-
   resources :products
+  root 'store#index', as: 'store'
+
+  post 'line_items/:product_id' => 'line_items#create', as: 'line_items'
+  resources :line_items
+  resources :carts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

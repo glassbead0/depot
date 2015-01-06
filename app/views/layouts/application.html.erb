@@ -18,12 +18,15 @@
 </head>
 <body class='<%= controller.controller_name %>'>
   <div id="banner">
-    <%= image_tag('logo.jpg') %>
+    <%= link_to store_index_path do %>
+      <%= image_tag('logo.jpg') %>
+    <% end %>
     <%= @page_title || 'Pragmatic Bookshelf' %>
   </div>
 
   <div id="columns">
     <div id="side">
+      <p id="time"><%= Time.now.strftime("%b %e, %I:%M %p") %></p>
       <ul>
         <li><%= link_to 'Home', '#' %></li>
         <li><%= link_to 'Questions', '#' %></li>
@@ -31,6 +34,7 @@
         <li><%= link_to 'Contact', '#' %></li>
       </ul>
     </div>
+
     <div id="main">
       <div class="container">
         <% flash.each do |name, msg| %>
@@ -44,6 +48,7 @@
         <% end %>
 
         <%= yield %>
+      </div>
     </div>
   </div>
 </body>

@@ -20,14 +20,18 @@ class ProductsControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_select 'input', 5
+    assert_select 'label', 4
+    assert_select 'h1', /New product/
   end
 
   test "should create product" do
     assert_difference('Product.count') do
       post :create, product: @update
+      assert_not_nil @product
     end
 
-    # assert_redirected_to product_path(assigns(:product))
+    assert_redirected_to product_path(assigns(:product))
   end
 
   test "should show product" do

@@ -9,5 +9,4 @@ class StoreControllerTest < ActionController::TestCase
     assert_select 'h3', 'Programming Ruby 2.1'
     assert_select '.price', /\$[,\d]+\.\d\d/
   end
-
 end
