@@ -27,6 +27,10 @@
   <div id="columns">
     <div id="side">
       <p id="time"><%= Time.now.strftime("%b %e, %I:%M %p") %></p>
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+
       <ul>
         <li><%= link_to 'Home', '#' %></li>
         <li><%= link_to 'Questions', '#' %></li>
